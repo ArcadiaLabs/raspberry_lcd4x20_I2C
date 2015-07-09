@@ -1,4 +1,6 @@
 # on importe le pilote
+import sys
+sys.path.append("./lib")
 import lcddriver
 from time import *
 
