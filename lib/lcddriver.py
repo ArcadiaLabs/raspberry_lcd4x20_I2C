@@ -84,8 +84,9 @@ class lcd:
    def lcd_write(self, cmd, mode=0):
       self.lcd_write_four_bits(mode | (cmd & 0xF0))
       self.lcd_write_four_bits(mode | ((cmd << 4) & 0xF0))
+      
    #turn on/off the lcd backlight
-   def lcd_backligth(self,state):
+   def lcd_backlight(self, state):
       if state in ("on","On","ON"):
          self.lcd_device.write_cmd(LCD_BACKLIGHT)
       elif state in ("off","Off","OFF"):
